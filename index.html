@@ -22,6 +22,7 @@
     <section id="home">
         <h1>Mallikarjuna Mannem</h1>
         <p>Data Scientist</p>
+        <img src="your-photo.jpg" alt="Mallikarjuna Mannem" class="profile-photo">
     </section>
 
     <section id="about">
@@ -29,19 +30,81 @@
         <p>Introduction about yourself...</p>
     </section>
 
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Master of Science in Data Science and Analytics</strong> <br>
+           Grand Valley State University, Grand Rapids, MI <br>
+           <em>Expected Graduation:</em> May 2025 <br>
+           GPA: 4.0</p>
+        <p><strong>Bachelor of Technology in Computer Science and Engineering</strong> <br>
+           Andhra University, Visakhapatnam, India <br>
+           <em>Graduated:</em> April 2018 <br>
+           GPA: 3.7</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Machine learning, statistical computing, modeling & graphics with R, knowledge discovery & data mining, ETL processes, and data pipelines, predictive analysis, exploratory analysis, schema design, data engineering & information management (NoSQL and SQL databases), data visualization and UX design</li>
+            <li>R, Python, C, SQL, PHP, HTML, CSS</li>
+            <li>MS Excel, Power BI, Git, Azure fundamentals, Ansible, Figma, Miro, Canva, Pentaho, Google Colaboratory</li>
+        </ul>
+    </section>
+
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
             <h3>Machine Learning: Unveiling Viewer Engagement through YouTube Video Data Analysis</h3>
-            <p>Details about the project...</p>
+            <p>Objective: Analyzed YouTube video data to understand the relationship between video characteristics and viewer engagement using sentiment analysis of comments.</p>
+            <p>Data Sources: Video metadata and viewer comments datasets.</p>
+            <p>Techniques:
+                <ul>
+                    <li>Data Cleaning: Removed non-alphanumeric characters, stop words, and emojis.</li>
+                    <li>Feature Extraction: Used CountVectorizer and TruncatedSVD.</li>
+                    <li>Sentiment Analysis: Employed TextBlob for sentiment polarity scores; visualized using violin plots.</li>
+                    <li>Model Training: Trained Random Forest, Logistic Regression, and Multinomial Naive Bayes models.</li>
+                    <li>Evaluation: Cross-validation metrics (accuracy, precision, recall) using GridSearchCV.</li>
+                </ul>
+            </p>
+            <p>Key Findings:
+                <ul>
+                    <li>Weak correlation between comment sentiment and video views (Pearson coefficient 0.017).</li>
+                    <li>Frequent comment terms identified through word cloud analysis.</li>
+                </ul>
+            </p>
+            <p>Tools: Python, Pandas, NLTK, TextBlob, Scikit-learn, Matplotlib</p>
+            <p>Impact: Provided insights for content creators and platform managers to enhance viewer engagement and content recommendation systems.</p>
         </div>
+
         <div class="project">
             <h3>Data Mining: Michigan Surface Water Analysis</h3>
-            <p>Details about the project...</p>
+            <p>Objective: Analyzed surface water data in Michigan to study the effects of rising PFAS (Per- and Polyfluoroalkyl Substances) contamination and the Flint water crisis.</p>
+            <p>Techniques:
+                <ul>
+                    <li>Data Cleaning and Preprocessing: Handled missing values and inconsistent data formats. Converted 'CollectionDate' to numerical features representing days. Scaled numerical data for better model performance.</li>
+                    <li>Feature Engineering: Engineered features such as 'CollectionDate' to ordinal format for improved model accuracy. Combined encoded features with numerical features like 'X' and 'Y' coordinates.</li>
+                    <li>Exploratory Data Analysis: Created scatter plots and time series visualizations to illustrate PFAS trends. Analyzed PFAS compound concentrations over time and across different locations.</li>
+                    <li>Model Development: Developed and evaluated Linear Regression and Random Forest models to predict PFAS concentrations. Conducted hyperparameter tuning using Grid Search Cross-Validation to optimize model performance.</li>
+                    <li>Future Work: Investigate additional machine learning models for better prediction accuracy. Explore more advanced feature engineering techniques to capture complex relationships in data.</li>
+                </ul>
+            </p>
+            <p>Publication Plan: Collaborate with Professor Kamrul Hassan to write and publish an article on PFAS contamination and its implications for public health in Michigan. Document findings, methodologies, and insights gained from the analysis to contribute to environmental science literature.</p>
+            <p>Tools and Technologies: Utilized Python for data cleaning, preprocessing, and analysis. Leveraged libraries such as pandas, scikit-learn, matplotlib, and seaborn for data manipulation, model development, and visualization.</p>
         </div>
+
         <div class="project">
             <h3>R Programming: Gun Violence Data Analysis</h3>
-            <p>Details about the project...</p>
+            <p>Objective: Analyzed gun violence incidents in the United States to identify patterns and trends in gun-related incidents, including fatalities and injuries.</p>
+            <p>Techniques:
+                <ul>
+                    <li>Data Cleaning and Preprocessing: Handled missing values and inconsistent data formats. Standardized date formats and extracted relevant date components (e.g., year). Merged geographic data with incident data for comprehensive analysis.</li>
+                    <li>Exploratory Data Analysis: Visualizations: Created scatter plots, histograms, and pie charts to visualize key trends in gun violence incidents. Incident Distribution: Plotted incidents by year and state to identify temporal and geographic trends. Casualty Analysis: Analyzed the number of fatalities and injuries to determine the severity of incidents over time.</li>
+                    <li>Participant Gender Analysis: Extracted and analyzed participant gender data to understand the demographic distribution of individuals involved in incidents. Created a pie chart displaying the proportion of male and female participants.</li>
+                    <li>Geospatial Analysis: Mapped the geographic distribution of incidents using latitude and longitude data. Generated heatmaps to identify regions with high density of gun violence incidents.</li>
+                    <li>Interactive Visualization: Developed an interactive plot to display the location of incidents, distinguishing between killed (red) and injured (yellow) participants, with incident details shown on hover.</li>
+                </ul>
+            </p>
+            <p>Tools and Technologies: Utilized R for data cleaning, analysis, and visualization. Leveraged libraries such as dplyr, ggplot2, and leaflet for data manipulation and plotting. Applied advanced data wrangling techniques to handle complex and nested data structures.</p>
         </div>
     </section>
 

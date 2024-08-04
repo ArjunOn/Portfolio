@@ -32,6 +32,15 @@ section {
     margin: 20px;
 }
 
+.profile-photo {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
 .project {
     background: #f4f4f4;
     padding: 10px;
