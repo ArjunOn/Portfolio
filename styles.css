@@ -1,19 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: #333;
+    background: #222;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -30,11 +32,20 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
 }
 
 section {
-    padding: 20px;
-    margin: 70px 20px 20px 20px; /* Adjust margin-top to prevent content from hiding behind the fixed header */
+    padding: 60px 20px 20px 20px; /* Adjust margin-top to prevent content from hiding behind the fixed header */
+    margin-top: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-photo {
@@ -44,17 +55,62 @@ section {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 5px solid #f39c12;
 }
 
-.project {
-    background: #f4f4f4;
-    padding: 10px;
-    margin: 10px 0;
+h1, h2, h3 {
+    font-weight: 300;
+    color: #222;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 footer {
-    background: #333;
+    background: #222;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: none;
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project p {
+    margin-bottom: 0;
 }
