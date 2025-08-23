@@ -8,47 +8,48 @@ All colors MUST be HSL. Modern, sophisticated palette with data visualization in
 
 @layer base {
   :root {
-    /* Core Background & Foreground */
-    --background: 215 25% 97%;
-    --foreground: 215 25% 12%;
+    /* Core Background & Foreground - Enhanced */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 5%;
 
     /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 12%;
+    --card-foreground: 222 84% 5%;
 
     /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 12%;
+    --popover-foreground: 222 84% 5%;
 
-    /* Primary Brand - Professional Data Science Blue */
-    --primary: 210 100% 45%;
+    /* Primary Brand - Vibrant Data Science Purple */
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 210 100% 40%;
-    --primary-muted: 210 40% 85%;
+    --primary-glow: 270 100% 70%;
+    --primary-hover: 262 83% 48%;
+    --primary-muted: 262 40% 85%;
 
-    /* Secondary - Sophisticated Teal */
-    --secondary: 185 65% 88%;
-    --secondary-foreground: 185 85% 25%;
-    --secondary-hover: 185 65% 82%;
+    /* Secondary - Modern Slate */
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 217 32% 22%;
 
     /* Muted System */
-    --muted: 215 15% 94%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Accent - Warm Professional Orange */
-    --accent: 25 95% 60%;
+    /* Accent - Electric Blue */
+    --accent: 195 100% 50%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 25 95% 55%;
-    --accent-muted: 25 45% 92%;
+    --accent-hover: 195 100% 45%;
+    --accent-muted: 195 45% 92%;
 
-    /* Success - Data Positive Green */
-    --success: 140 65% 50%;
+    /* Success - Emerald Green */
+    --success: 142 69% 50%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning & Destructive */
-    --warning: 45 95% 60%;
-    --warning-foreground: 45 25% 15%;
-    --destructive: 0 75% 55%;
+    /* Warning & Destructive - Vibrant */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
@@ -59,16 +60,22 @@ All colors MUST be HSL. Modern, sophisticated palette with data visualization in
     /* Radius System */
     --radius: 0.5rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(185 85% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(185 85% 45%) 50%, hsl(25 95% 60%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 25% 97%));
-    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 97%), hsl(215 15% 94%));
+    /* Enhanced Gradients - More vibrant and professional */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(270 100% 70%) 50%, hsl(195 100% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(270 100% 70%) 25%, hsl(195 100% 50%) 75%, hsl(142 69% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(142 69% 50%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(0 84% 60%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
 
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(215 25% 12% / 0.1);
-    --shadow-card: 0 4px 20px -4px hsl(215 25% 12% / 0.08);
-    --shadow-hover: 0 20px 40px -12px hsl(210 100% 45% / 0.15);
+    /* Enhanced Shadows with Color */
+    --shadow-elegant: 0 10px 30px -10px hsl(222 84% 5% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(262 83% 58% / 0.15);
+    --shadow-hover: 0 20px 40px -12px hsl(262 83% 58% / 0.4);
+    --shadow-glow: 0 0 60px hsl(270 100% 70% / 0.6);
+    --shadow-accent: 0 8px 32px -4px hsl(195 100% 50% / 0.3);
+    --shadow-success: 0 8px 32px -4px hsl(142 69% 50% / 0.3);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -92,55 +99,62 @@ All colors MUST be HSL. Modern, sophisticated palette with data visualization in
   }
 
   .dark {
-    /* Dark Mode - Professional Data Science Theme */
-    --background: 215 30% 8%;
-    --foreground: 215 15% 92%;
+    /* Dark Mode - Enhanced Professional Data Science Theme */
+    --background: 222 47% 4%;
+    --foreground: 213 31% 93%;
 
-    --card: 215 25% 12%;
-    --card-foreground: 215 15% 92%;
+    --card: 220 40% 8%;
+    --card-foreground: 213 31% 93%;
 
-    --popover: 215 25% 12%;
-    --popover-foreground: 215 15% 92%;
+    --popover: 220 40% 8%;
+    --popover-foreground: 213 31% 93%;
 
-    --primary: 210 100% 65%;
-    --primary-foreground: 215 30% 8%;
-    --primary-hover: 210 100% 70%;
-    --primary-muted: 210 40% 25%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 270 100% 70%;
+    --primary-hover: 262 83% 68%;
+    --primary-muted: 262 40% 25%;
 
-    --secondary: 185 45% 25%;
-    --secondary-foreground: 185 65% 85%;
-    --secondary-hover: 185 45% 30%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 217 32% 22%;
 
-    --muted: 215 20% 15%;
-    --muted-foreground: 215 15% 65%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 25 85% 65%;
-    --accent-foreground: 215 30% 8%;
-    --accent-hover: 25 85% 70%;
-    --accent-muted: 25 35% 20%;
+    --accent: 195 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 195 100% 60%;
+    --accent-muted: 195 35% 20%;
 
-    --success: 140 55% 55%;
-    --success-foreground: 215 30% 8%;
+    --success: 142 69% 50%;
+    --success-foreground: 0 0% 100%;
 
-    --warning: 45 85% 65%;
-    --warning-foreground: 45 25% 8%;
-    --destructive: 0 65% 60%;
-    --destructive-foreground: 215 30% 8%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 215 20% 20%;
     --input: 215 20% 20%;
     --ring: 210 100% 65%;
 
-    /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%), hsl(185 65% 55%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 65%) 0%, hsl(185 65% 55%) 50%, hsl(25 85% 65%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(215 25% 12%), hsl(215 20% 15%));
-    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%), hsl(215 25% 12%));
+    /* Dark Mode Enhanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(270 100% 70%) 50%, hsl(195 100% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(270 100% 70%) 25%, hsl(195 100% 50%) 75%, hsl(142 69% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 40% 8%) 0%, hsl(217 32% 17%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(142 69% 50%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(0 84% 60%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 4%) 0%, hsl(220 40% 8%) 100%);
 
-    /* Dark Mode Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(215 30% 8% / 0.5);
-    --shadow-card: 0 4px 20px -4px hsl(215 30% 8% / 0.3);
-    --shadow-hover: 0 20px 40px -12px hsl(210 100% 65% / 0.25);
+    /* Dark Mode Enhanced Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(222 47% 4% / 0.8);
+    --shadow-card: 0 4px 20px -4px hsl(262 83% 58% / 0.25);
+    --shadow-hover: 0 20px 40px -12px hsl(262 83% 58% / 0.5);
+    --shadow-glow: 0 0 60px hsl(270 100% 70% / 0.4);
+    --shadow-accent: 0 8px 32px -4px hsl(195 100% 50% / 0.4);
+    --shadow-success: 0 8px 32px -4px hsl(142 69% 50% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -185,12 +199,32 @@ All colors MUST be HSL. Modern, sophisticated palette with data visualization in
     @apply bg-primary/50;
   }
 
-  /* Gradient text */
+  /* Enhanced gradient text variations */
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .gradient-text-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-warm {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
   }
 
   /* Animated underline */
@@ -209,25 +243,68 @@ All colors MUST be HSL. Modern, sophisticated palette with data visualization in
     @apply scale-x-100 origin-bottom-left;
   }
 
-  /* Glass morphism effect */
+  /* Enhanced glass morphism effects */
   .glass {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glow);
   }
 
-  /* Floating animation */
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Advanced hover effects */
+  .card-hover {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .icon-bounce {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .icon-bounce:hover {
+    transform: scale(1.2) rotate(5deg);
+  }
+
+  /* Background gradient utilities */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .bg-gradient-cool {
+    background: var(--gradient-cool);
+  }
+
+  /* Enhanced floating animations */
   .float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
   }
 
   @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-20px) rotate(-1deg); }
   }
 
   /* Particle background effect */
@@ -244,9 +321,18 @@ All colors MUST be HSL. Modern, sophisticated palette with data visualization in
     width: 100%;
     height: 100%;
     background-image: 
-      radial-gradient(circle at 20% 20%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, hsl(var(--accent) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 60%, hsl(var(--secondary) / 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(var(--success) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 60% 40%, hsl(var(--warning) / 0.1) 0%, transparent 50%);
+    animation: particles-float 12s ease-in-out infinite;
     pointer-events: none;
+  }
+
+  @keyframes particles-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+    25% { transform: translateY(-10px) rotate(90deg); opacity: 0.8; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 0.6; }
+    75% { transform: translateY(-15px) rotate(270deg); opacity: 0.8; }
   }
 }

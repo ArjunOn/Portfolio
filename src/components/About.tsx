@@ -12,15 +12,18 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-24 bg-gradient-subtle relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
-            About <span className="gradient-text">Me</span>
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-5xl md:text-6xl font-playfair font-bold mb-8">
+            About <span className="gradient-text-accent">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate data scientist with a strong foundation in analytics, machine learning, 
-            and research methodologies
+          <div className="w-24 h-1 bg-gradient-accent mx-auto mb-8 rounded-full"></div>
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Passionate data scientist with a strong foundation in 
+            <span className="text-primary font-semibold"> analytics</span>, 
+            <span className="text-accent font-semibold"> machine learning</span>, 
+            and <span className="text-success font-semibold">research methodologies</span>
           </p>
         </div>
 
@@ -51,11 +54,13 @@ export const About = () => {
 
           {/* Right: Stats & Info Cards */}
           <div className="space-y-6 animate-slide-in-right">
-            <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <GraduationCap className="w-8 h-8 text-primary mr-3" />
-                  <h3 className="text-xl font-playfair font-semibold">Education</h3>
+            <Card className="card-hover shadow-card bg-gradient-card border-primary/20">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-primary p-3 rounded-full mr-4 animate-pulse-glow">
+                    <GraduationCap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-playfair font-semibold gradient-text">Education</h3>
                 </div>
                 <div className="space-y-3">
                   <div>
@@ -67,11 +72,13 @@ export const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Award className="w-8 h-8 text-accent mr-3" />
-                  <h3 className="text-xl font-playfair font-semibold">Achievements</h3>
+            <Card className="card-hover shadow-accent bg-gradient-card border-accent/20">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-accent p-3 rounded-full mr-4 animate-pulse-glow">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-playfair font-semibold gradient-text-accent">Achievements</h3>
                 </div>
                 <div className="space-y-2">
                   <Badge variant="secondary" className="mr-2">Dean's List</Badge>
@@ -81,11 +88,13 @@ export const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Target className="w-8 h-8 text-success mr-3" />
-                  <h3 className="text-xl font-playfair font-semibold">Focus Areas</h3>
+            <Card className="card-hover shadow-success bg-gradient-card border-success/20">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-warm p-3 rounded-full mr-4 animate-pulse-glow">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-playfair font-semibold gradient-text-warm">Focus Areas</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <Badge variant="outline">Machine Learning</Badge>
