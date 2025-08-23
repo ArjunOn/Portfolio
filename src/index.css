@@ -2,41 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Professional Data Science Portfolio Design System
+All colors MUST be HSL. Modern, sophisticated palette with data visualization inspiration.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Background & Foreground */
+    --background: 215 25% 97%;
+    --foreground: 215 25% 12%;
 
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 12%;
 
+    /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand - Professional Data Science Blue */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 40%;
+    --primary-muted: 210 40% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Sophisticated Teal */
+    --secondary: 185 65% 88%;
+    --secondary-foreground: 185 85% 25%;
+    --secondary-hover: 185 65% 82%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted System */
+    --muted: 215 15% 94%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm Professional Orange */
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 25 95% 55%;
+    --accent-muted: 25 45% 92%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Data Positive Green */
+    --success: 140 65% 50%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning & Destructive */
+    --warning: 45 95% 60%;
+    --warning-foreground: 45 25% 15%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
+    /* Borders & Inputs */
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 210 100% 45%;
+
+    /* Radius System */
     --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(185 85% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(185 85% 45%) 50%, hsl(25 95% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 25% 97%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 97%), hsl(215 15% 94%));
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(215 25% 12% / 0.1);
+    --shadow-card: 0 4px 20px -4px hsl(215 25% 12% / 0.08);
+    --shadow-hover: 0 20px 40px -12px hsl(210 100% 45% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +92,55 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode - Professional Data Science Theme */
+    --background: 215 30% 8%;
+    --foreground: 215 15% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 12%;
+    --card-foreground: 215 15% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 215 15% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 215 30% 8%;
+    --primary-hover: 210 100% 70%;
+    --primary-muted: 210 40% 25%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 185 45% 25%;
+    --secondary-foreground: 185 65% 85%;
+    --secondary-hover: 185 45% 30%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 25 85% 65%;
+    --accent-foreground: 215 30% 8%;
+    --accent-hover: 25 85% 70%;
+    --accent-muted: 25 35% 20%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 140 55% 55%;
+    --success-foreground: 215 30% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --warning: 45 85% 65%;
+    --warning-foreground: 45 25% 8%;
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 215 30% 8%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 210 100% 65%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%), hsl(185 65% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 65%) 0%, hsl(185 65% 55%) 50%, hsl(25 85% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 12%), hsl(215 20% 15%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%), hsl(215 25% 12%));
+
+    /* Dark Mode Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(215 30% 8% / 0.5);
+    --shadow-card: 0 4px 20px -4px hsl(215 30% 8% / 0.3);
+    --shadow-hover: 0 20px 40px -12px hsl(210 100% 65% / 0.25);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +158,95 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animated underline */
+  .animated-underline {
+    @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .animated-underline::after {
+    background: var(--gradient-primary);
+  }
+  
+  .animated-underline:hover::after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Particle background effect */
+  .particles {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 20%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(var(--accent) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, hsl(var(--secondary) / 0.1) 0%, transparent 50%);
+    pointer-events: none;
   }
 }
